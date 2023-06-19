@@ -50,6 +50,7 @@ height: 90vh;
 margin-top: 10vh;
 background-color: var(--cor-segundaria);
 padding: 30px 0;
+display: none;
 }
 .titulo-lateral{
     width: 90%;
@@ -113,6 +114,9 @@ padding: 30px 0;
 }
 .icone-lateral a:hover{
 background-color: var(--cor-primaria);
+}
+.active{
+    display: block;
 }
 
 
