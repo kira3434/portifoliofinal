@@ -1,231 +1,68 @@
-:root {
-    --cor-primaria: #f1efef;
-    --cor-segundaria: #d2d2d2;
-    --cor-texto: #232323;
-}
+<!DOCTYPE html>
+<html lang="pt0br">
 
-@font-face {
-    font-family: 'valorant';
-    src: url(fonts/neo-latina-demo-FFP.ttf);
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-body {
-    background-color: var(--cor-primaria);
-    padding: 0;
-    margin: 0;
-}
+<body>
+    <nav>
+        <div onclick="toggleMenuLateral()" class="menu">
+            <img id="icone-menu" src="imagens/menu.png" width="40px" alt="">
+        </div>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT-ME</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="menu-lateral  ">
+        <div class="titulo-lateral">
+            <h1>JHONATAS REIS</h1>
+        </div>
+        <div class="links-lateral">
+            <div class="caixa-link"><a href="#home">HOME</a></div>
+            <div class="caixa-link"><a href="#about">ABOUT-ME</a></div>
+            <div class="caixa-link"><a href="#skills">SKILLS</a></div>
+            <div class="caixa-link"><a href="#projects">PROJECTS</a></div>
+            <div class="caixa-link"><a href="#contacts">CONTACT</a></div>
+        </div>
+        <div class="caixa-icones-lateral">
+            <div class="icone-lateral">
+                <a href="#">
+                    <img src="imagens/icone curiculo.png" width="50px" alt="">
+                </a>
+            </div>
+            <div class="icone-lateral">
+                <a href="#">
+                    <img src="imagens/icone github.png" width="50px" alt="">
+                </a>
+            </div>
+            <div class="icone-lateral">
+                <a href="#">
+                    <img src="imagens/icone linkedin.png" width="50px" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+<div id="home">
+    <div class="caixa-home">
+        <div class="prisma-home-img">
+            <img src="imagens/prisma.png" width="250px" alt="">
+        </div>
+        <div class="bola-home-img">
+            <img src="imagens/bola.png" width="250px" alt="">
+        </div>
+        <h1>JHONATAS REIS</h1>
+    </div>
+</div>
 
-nav {
-    width: 96%;
-    padding: 0 2%;
-    height: 10vh;
-    background: blur(15px);
-    position: fixed;
-    font-family: 'valorant', 'Courier New', Courier, monospace;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
+    <script src="script.js"></script>
+</body>
 
-nav li {
-    display: inline;
-    margin-left: 30px;
-
-}
-
-nav a {
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: var(--cor-texto);
-    border-radius: 15px;
-    padding: 2px 10px;
-    transition: 1.0s;
-}
-
-nav a:hover {
-    background-color: var(--cor-texto);
-    color: var(--cor-primaria);
-}
-
-.menu {
-    display: none;
-}
-
-.menu-lateral {
-    position: fixed;
-    width: 300px;
-    height: 90vh;
-    margin-top: 10vh;
-    background-color: var(--cor-segundaria);
-    padding: 30px 0;
-    display: none;
-    z-index: 2;
-}
-
-.titulo-lateral {
-    width: 90%;
-    margin: 0 auto;
-    height: 6%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.titulo-lateral h1 {
-    font-size: 1.3rem;
-    color: var(--cor-texto);
-    font-family: 'valorant', 'Courier New', Courier, monospace;
-}
-
-.links-lateral {
-    width: 90%;
-    height: 450px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.caixa-link a {
-    width: 200px;
-    margin: auto;
-    margin-bottom: 35PX;
-    display: inline-block;
-    height: 30px;
-    border-radius: 15px;
-    line-height: 30px;
-    text-align: center;
-    background-color: var(--cor-texto);
-    color: var(--cor-primaria);
-    text-decoration: none;
-    margin-top: 10px;
-    transition: 0.5s;
-    font-family: 'valorant', 'Courier New', Courier, monospace;
-}
-
-.caixa-link a:hover {
-    background-color: var(--cor-primaria);
-    color: var(--cor-textos);
-    width: 220px;
-}
-
-.caixa-icones-lateral {
-    width: 90%;
-    margin: 0 auto;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icone-lateral a {
-    width: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-    display: inline-block;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: var(--cor-texto);
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-.icone-lateral a:hover {
-    background-color: var(--cor-primaria);
-}
-
-.active {
-    display: block;
-}
-
-
-.icone-lateral img {
-    filter: invert(99%) sepia(1%) saturate(135%) hue-rotate(265deg) brightness(115%) contrast(94%);
-}
-
-.icone-lateral img:hover {
-    filter: invert(15%) sepia(0%) saturate(1041%) hue-rotate(146deg) brightness(88%) contrast(100%);
-}
-
-#home {
-    width: 96%;
-    height: 90vh;
-    margin: 0 auto;
-    top: 10vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.caixa-home {
-    width: 90%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-.caixa-home h1{
-    font-size: 5.5rem;
-    font-family: 'valorant', 'Courier New', Courier, monospace;
-    z-index: 1;
-    
-}
-
-.prisma-home-img {
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    left: 0;
-    top: 15px;
-    z-index: 0;
-}
-
-.bola-home-img {
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    bottom: -20px;
-    right: -10px;
-}
-
-@media (max-width: 770px){
-    nav{
-        justify-content: flex-start;
-    }
-    nav ul{
-        display: none;
-    }
-    .menu{
-        display: block;
-    }
-    .caixa-home h1{
-        font-size: 4.0rem;
-    }
-    
-}
-@media (max-width: 430px){
-.caixa-home h1{
-font-size: 2.5rem;
-}
-#home{
-    align-items: flex-start;
-}
-.prisma-home-img{
-    width: 150px;
-    height: 150px;
-    top: 70px;
-}
-.prisma-home-img img{
-    width: 150px;
-}
-.bola-home-img{
-    width: 150px;
-    height: 150px;
-    bottom: 70px;
-}
-.bola-home-img img{
-    width: 150px;
-}
-}
+</html>
